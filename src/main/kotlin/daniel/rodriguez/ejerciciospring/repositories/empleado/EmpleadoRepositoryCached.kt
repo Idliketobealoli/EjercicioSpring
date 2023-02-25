@@ -22,7 +22,7 @@ class EmpleadoRepositoryCached
     }
 
     @Cacheable("workers")
-    override suspend fun findById(id: UUID): Empleado? = withContext(Dispatchers.IO) {
+    override suspend fun findById(id: Long): Empleado? = withContext(Dispatchers.IO) {
         repo.findById(id)
     }
 
@@ -36,7 +36,7 @@ class EmpleadoRepositoryCached
     }
 
     @CacheEvict("workers")
-    override suspend fun delete(id: UUID): Empleado? = withContext(Dispatchers.IO) {
+    override suspend fun delete(id: Long): Empleado? = withContext(Dispatchers.IO) {
         val res = repo.findById(id) ?: return@withContext null
         repo.deleteById(id)
         res

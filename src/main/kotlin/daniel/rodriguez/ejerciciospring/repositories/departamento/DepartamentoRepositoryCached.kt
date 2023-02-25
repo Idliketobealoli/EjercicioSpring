@@ -22,7 +22,7 @@ class DepartamentoRepositoryCached
     }
 
     @Cacheable("departments")
-    override suspend fun findById(id: UUID): Departamento? = withContext(Dispatchers.IO) {
+    override suspend fun findById(id: Long): Departamento? = withContext(Dispatchers.IO) {
         repo.findById(id)
     }
 
@@ -36,10 +36,9 @@ class DepartamentoRepositoryCached
     }
 
     @CacheEvict("departments")
-    override suspend fun delete(id: UUID): Departamento? = withContext(Dispatchers.IO) {
+    override suspend fun delete(id: Long): Departamento? = withContext(Dispatchers.IO) {
         val res = repo.findById(id) ?: return@withContext null
         repo.deleteById(id)
         res
     }
-
 }

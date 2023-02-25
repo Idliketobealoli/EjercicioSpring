@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository
 import java.util.UUID
 
 @Repository
-interface EmpleadoRepository : CoroutineCrudRepository<Empleado, UUID> {
+interface EmpleadoRepository : CoroutineCrudRepository<Empleado, Long> {
     fun findByUuid(uuid: UUID): Flow<Empleado>
 }

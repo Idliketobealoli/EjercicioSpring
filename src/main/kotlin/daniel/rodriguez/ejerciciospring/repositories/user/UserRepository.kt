@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository
 import java.util.*
 
 @Repository
-interface UserRepository  : CoroutineCrudRepository<User, UUID> {
+interface UserRepository  : CoroutineCrudRepository<User, Long> {
     fun findByUuid(uuid: UUID): Flow<User>
     fun findFirstByEmail(email: String): Flow<User>
     fun findByUsername(username: String): Flow<User>

@@ -14,10 +14,12 @@ data class User(
     val id: Long? = null,
     val uuid: UUID? = UUID.randomUUID(),
     @NotEmpty(message = "Must have a username.")
+    @get:JvmName("userName")
     val username: String,
     @NotEmpty(message = "Must have an email.")
     val email: String,
     @NotEmpty(message = "Must have a password.")
+    @get:JvmName("userPassword")
     val password: String,
     @NotEmpty(message = "Must have a rol.")
     val role: Role,
