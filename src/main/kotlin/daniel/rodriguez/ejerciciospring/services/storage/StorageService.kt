@@ -3,6 +3,7 @@ package daniel.rodriguez.ejerciciospring.services.storage
 import daniel.rodriguez.ejerciciospring.controllers.StorageController
 import daniel.rodriguez.ejerciciospring.exception.StorageExceptionBadRequest
 import daniel.rodriguez.ejerciciospring.exception.StorageExceptionNotFound
+import jakarta.servlet.http.HttpServletRequest
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.core.io.Resource
 import org.springframework.core.io.UrlResource

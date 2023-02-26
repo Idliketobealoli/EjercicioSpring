@@ -50,7 +50,7 @@ class JwtAuthorizationFilter(
 
         System.err.println(user)
 
-        return@runBlocking UsernamePasswordAuthenticationToken(
+        UsernamePasswordAuthenticationToken(
             user,
             null,
             user.authorities

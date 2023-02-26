@@ -32,7 +32,7 @@ class UserService
 
     suspend fun findUserByUuid(uuid: UUID): UserDTO = withContext(Dispatchers.IO) {
         repo.findByUuid(uuid).firstOrNull()?.toDTO()
-            ?: throw UserExceptionNotFound("Couldn't find empleado with uuid $uuid.")
+            ?: throw UserExceptionNotFound("Couldn't find user with uuid $uuid.")
     }
 
     suspend fun findAllUsers(): List<UserDTO> = withContext(Dispatchers.IO) {

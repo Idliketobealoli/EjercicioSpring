@@ -13,12 +13,12 @@ import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.api.extension.ExtendWith
+import org.springframework.boot.test.context.SpringBootTest
 import java.util.*
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @ExtendWith(MockKExtension::class)
+@SpringBootTest
 internal class EmpleadoRepositoryCachedTest {
     private val entity = Empleado(
         uuid = UUID.fromString("93a98d69-6da6-48a7-b34f-05b596ea0002"),

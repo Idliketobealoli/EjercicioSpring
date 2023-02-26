@@ -15,7 +15,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.withContext
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
+import org.springframework.web.client.RestTemplate
+import org.springframework.web.client.getForObject
+import org.springframework.web.client.postForObject
 import org.springframework.web.multipart.MultipartFile
 import java.util.*
 
@@ -50,7 +54,8 @@ class EmpleadoService
     }
 
     suspend fun updateAvatar(empleado: Empleado, file: MultipartFile): Empleado = withContext(Dispatchers.IO) {
-        val response = storageController.uploadFile(file)
+        val response = RestTemplate().postForObject<ResponseEntity<Map<String, String>>>("http://localhost:8080/ejercicioSpring/storage", file, ResponseEntity::class.java)
+        //val response = storageController.uploadFile(file)
         val avatarUrl = response.body?.get("url")
             ?: throw StorageExceptionNotFound("Url not found.")
 

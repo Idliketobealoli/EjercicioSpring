@@ -55,6 +55,7 @@ class SecurityConfig
             .requestMatchers(HttpMethod.DELETE, "/ejercicioSpring/users/{id}").hasRole("ADMIN")
             .requestMatchers(HttpMethod.DELETE, "/ejercicioSpring/empleados/{id}").hasRole("ADMIN")
             .requestMatchers(HttpMethod.DELETE, "/ejercicioSpring/departamentos/{id}").hasRole("ADMIN")
+            .requestMatchers(HttpMethod.DELETE, "/ejercicioSpring/storage/**").hasRole("ADMIN")
             .anyRequest().authenticated()
 
             .and()

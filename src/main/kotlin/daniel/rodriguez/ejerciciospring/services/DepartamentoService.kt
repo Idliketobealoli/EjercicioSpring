@@ -26,7 +26,7 @@ class DepartamentoService
     suspend fun findDepartamentoByUuid(uuid: UUID): DepartamentoDTO = withContext(Dispatchers.IO) {
         val empleados = eRepo.findAll().filter { it.departamentoId == uuid }.toSet()
         repo.findByUUID(uuid)?.toDTO(empleados)
-            ?: throw DepartamentoExceptionNotFound("Couldn't find empleado with uuid $uuid.")
+            ?: throw DepartamentoExceptionNotFound("Couldn't find departamento with uuid $uuid.")
     }
 
     suspend fun findAllDepartamentos(): List<DepartamentoDTO> = withContext(Dispatchers.IO) {
