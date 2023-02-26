@@ -1,5 +1,6 @@
 package daniel.rodriguez.ejerciciospring.repositories.empleado
 
+import daniel.rodriguez.ejerciciospring.exception.EmpleadoExceptionBadRequest
 import daniel.rodriguez.ejerciciospring.models.Empleado
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -11,6 +12,7 @@ import org.springframework.cache.annotation.CachePut
 import org.springframework.cache.annotation.Cacheable
 import org.springframework.stereotype.Repository
 import java.util.*
+import kotlin.jvm.Throws
 
 @Repository
 class EmpleadoRepositoryCached
@@ -30,11 +32,13 @@ class EmpleadoRepositoryCached
         repo.findByUuid(id).firstOrNull()
     }
 
+    @Throws(EmpleadoExceptionBadRequest::class)
     @CachePut("workers")
     override suspend fun save(entity: Empleado): Empleado = withContext(Dispatchers.IO) {
         repo.save(entity)
     }
 
+    @Throws(EmpleadoExceptionBadRequest::class)
     @CacheEvict("workers")
     override suspend fun delete(id: Long): Empleado? = withContext(Dispatchers.IO) {
         val res = repo.findById(id) ?: return@withContext null

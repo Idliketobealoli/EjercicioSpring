@@ -1,5 +1,6 @@
 package daniel.rodriguez.ejerciciospring.repositories.departamento
 
+import daniel.rodriguez.ejerciciospring.exception.DepartamentoExceptionBadRequest
 import daniel.rodriguez.ejerciciospring.models.Departamento
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -11,6 +12,7 @@ import org.springframework.cache.annotation.CachePut
 import org.springframework.cache.annotation.Cacheable
 import org.springframework.stereotype.Repository
 import java.util.*
+import kotlin.jvm.Throws
 
 @Repository
 class DepartamentoRepositoryCached
@@ -30,11 +32,13 @@ class DepartamentoRepositoryCached
         repo.findByUuid(id).firstOrNull()
     }
 
+    @Throws(DepartamentoExceptionBadRequest::class)
     @CachePut("departments")
     override suspend fun save(entity: Departamento): Departamento = withContext(Dispatchers.IO) {
         repo.save(entity)
     }
 
+    @Throws(DepartamentoExceptionBadRequest::class)
     @CacheEvict("departments")
     override suspend fun delete(id: Long): Departamento? = withContext(Dispatchers.IO) {
         val res = repo.findById(id) ?: return@withContext null

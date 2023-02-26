@@ -13,6 +13,6 @@ data class Departamento(
     val uuid: UUID? = UUID.randomUUID(),
     @NotEmpty(message = "Must have a name.")
     val nombre: String,
-    @Min(1)
-    val presupuesto: Double = 1.0
+    @Min(0)
+    val presupuesto: Double = 0.0
 )
