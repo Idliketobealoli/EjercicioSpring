@@ -15,13 +15,14 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.withContext
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.http.ResponseEntity
+import org.springframework.http.*
 import org.springframework.stereotype.Service
+import org.springframework.util.LinkedMultiValueMap
+import org.springframework.util.MultiValueMap
 import org.springframework.web.client.RestTemplate
-import org.springframework.web.client.getForObject
-import org.springframework.web.client.postForObject
 import org.springframework.web.multipart.MultipartFile
 import java.util.*
+
 
 @Service
 class EmpleadoService
@@ -54,9 +55,25 @@ class EmpleadoService
     }
 
     suspend fun updateAvatar(empleado: Empleado, file: MultipartFile): Empleado = withContext(Dispatchers.IO) {
-        val response = RestTemplate().postForObject<ResponseEntity<Map<String, String>>>("http://localhost:8080/ejercicioSpring/storage", file, ResponseEntity::class.java)
+        //val response = RestTemplate().postForObject<ResponseEntity<Map<String, String>>>("http://localhost:8080/ejercicioSpring/storage", file, ResponseEntity::class.java)
         //val response = storageController.uploadFile(file)
-        val avatarUrl = response.body?.get("url")
+        val headers = HttpHeaders()
+        headers.contentType = MediaType.MULTIPART_FORM_DATA
+        val body: MultiValueMap<String, Any> = LinkedMultiValueMap()
+        body.add("file", file.resource)
+        val requestEntity = HttpEntity(body, headers)
+        val uri = "http://localhost:8080/ejercicioSpring/storage"
+        val response = RestTemplate().postForEntity(uri, requestEntity, Map::class.java)
+        /*val request = RequestEntity
+            .post(uri)
+            .accept(MediaType.MULTIPART_FORM_DATA)
+            .body(body)
+
+         */
+        //val response = RestTemplate().exchange(request, MultiValueMap::class.java)
+
+        //val request = RequestEntity(HttpMethod.POST, URI("http://localhost:8080/ejercicioSpring/storage"))
+        val avatarUrl = response.body?.get("url")?.toString()
             ?: throw StorageExceptionNotFound("Url not found.")
 
         val empleadoUpdated = Empleado(

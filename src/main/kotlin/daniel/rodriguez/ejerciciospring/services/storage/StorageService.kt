@@ -40,7 +40,7 @@ class StorageService(
         }
     }
 
-    override fun store(file: MultipartFile): String {
+    override suspend fun store(file: MultipartFile): String {
         val fileName = StringUtils.cleanPath(file.originalFilename.toString())
         val extension = StringUtils.getFilenameExtension(fileName).toString()
         val name = fileName.replace(".$extension", "")
@@ -85,7 +85,7 @@ class StorageService(
         }
     }
 
-    override fun loadAll(): Stream<Path> {
+    override suspend fun loadAll(): Stream<Path> {
         return try {
             Files.walk(rootLocation, 1)
                 .filter { path -> !path.equals(rootLocation) }
@@ -95,11 +95,11 @@ class StorageService(
         }
     }
 
-    override fun load(fileName: String): Path {
+    override suspend fun load(fileName: String): Path {
         return rootLocation.resolve(fileName)
     }
 
-    override fun loadAsResource(fileName: String): Resource {
+    override suspend fun loadAsResource(fileName: String): Resource {
         return try {
             val file = load(fileName)
             val resource = UrlResource(file.toUri())
@@ -110,7 +110,7 @@ class StorageService(
         }
     }
 
-    override fun delete(fileName: String) {
+    override suspend fun delete(fileName: String) {
         val name: String = StringUtils.getFilename(fileName).toString()
         try {
             val file = load(name)
@@ -124,7 +124,7 @@ class StorageService(
         FileSystemUtils.deleteRecursively(rootLocation.toFile())
     }
 
-    override fun getUrl(fileName: String): String {
+    override suspend fun getUrl(fileName: String): String {
         return MvcUriComponentsBuilder
             .fromMethodName(StorageController::class.java, "serveFile", fileName, null)
             .build().toUriString()

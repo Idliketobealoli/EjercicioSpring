@@ -238,7 +238,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM5OTY2LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.T5jkQdGK1vOA9_fPqo6vHdiCLsRWYPkkWH1mqCqqOn7xTG73gB8wHZmbIPT_uiBmhhGgXDKOE2eovxV0WuK91Q",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTIyMDc5LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.LF88NYduU9TjIHeGOSLCRAArWC1xTEvO8mO4F6-e_ZQdfq06qbxgfWW6tycLhgrncBDRQhbRs2GYNOMyoZd6LQ",
 									"type": "string"
 								}
 							]
@@ -269,7 +269,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDQwOTkwLCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.BkaYPes8uU6I6gbjzkDOZW67SS-ZytuoMGSMEYgBk7h6aTckmk6phGlkrFog60rrViBcLr4oQ-duUxVvq8QB5g",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
 									"type": "string"
 								}
 							]
@@ -300,7 +300,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDQwOTkwLCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.BkaYPes8uU6I6gbjzkDOZW67SS-ZytuoMGSMEYgBk7h6aTckmk6phGlkrFog60rrViBcLr4oQ-duUxVvq8QB5g",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
 									"type": "string"
 								}
 							]
@@ -389,7 +389,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM5OTY2LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.T5jkQdGK1vOA9_fPqo6vHdiCLsRWYPkkWH1mqCqqOn7xTG73gB8wHZmbIPT_uiBmhhGgXDKOE2eovxV0WuK91Q",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTE3MDE4LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Shv_cm0XlsUameD__b4p46Av231HdB3bD2tR-mq_fgRGBM5uCQVF9HRMxM5zDwF2L-TD-o3Z9f1a89OCK5O4Uw",
 									"type": "string"
 								}
 							]
@@ -534,6 +534,48 @@
 					"response": []
 				},
 				{
+					"name": "update avatar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTIyMDc5LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.LF88NYduU9TjIHeGOSLCRAArWC1xTEvO8mO4F6-e_ZQdfq06qbxgfWW6tycLhgrncBDRQhbRs2GYNOMyoZd6LQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/User/IdeaProjects/EjercicioSpring/postman/gigachad.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/empleados/avatar/93a98d69-6da6-48a7-b34f-05b596ea0001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"empleados",
+								"avatar",
+								"93a98d69-6da6-48a7-b34f-05b596ea0001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "delete empleado",
 					"request": {
 						"auth": {
@@ -541,7 +583,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM4MjY3LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.-qFuQLzzPRWRF0KBu3_4kCqYo7FVjTvPIBLvU8IxIqTxCfZc8EJmqS4XaxWV-OcB5GNMahetLtESqTyngA4R4Q",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
 									"type": "string"
 								}
 							]
@@ -572,7 +614,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM4MjY3LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.-qFuQLzzPRWRF0KBu3_4kCqYo7FVjTvPIBLvU8IxIqTxCfZc8EJmqS4XaxWV-OcB5GNMahetLtESqTyngA4R4Q",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
 									"type": "string"
 								}
 							]
@@ -598,6 +640,16 @@
 				{
 					"name": "delete empleado BAD REQUEST",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -853,7 +905,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM4MjY3LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.-qFuQLzzPRWRF0KBu3_4kCqYo7FVjTvPIBLvU8IxIqTxCfZc8EJmqS4XaxWV-OcB5GNMahetLtESqTyngA4R4Q",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
 									"type": "string"
 								}
 							]
@@ -884,7 +936,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM4MjY3LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.-qFuQLzzPRWRF0KBu3_4kCqYo7FVjTvPIBLvU8IxIqTxCfZc8EJmqS4XaxWV-OcB5GNMahetLtESqTyngA4R4Q",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
 									"type": "string"
 								}
 							]
@@ -910,6 +962,16 @@
 				{
 					"name": "delete departamento BAD REQUEST",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -959,6 +1021,16 @@
 				{
 					"name": "find NOT FOUND",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTE3MDE4LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Shv_cm0XlsUameD__b4p46Av231HdB3bD2tR-mq_fgRGBM5uCQVF9HRMxM5zDwF2L-TD-o3Z9f1a89OCK5O4Uw",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -985,7 +1057,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDQ5MTgwLCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.WgihVIljcmYwJjWpv3GNUNPoScvvDMZCf_BO0Mqaj_uRgFZUFEwLdDFTLhQv9utpy4l3wG-7EqTU2Lr8ecwLwg",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTIyMDc5LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.LF88NYduU9TjIHeGOSLCRAArWC1xTEvO8mO4F6-e_ZQdfq06qbxgfWW6tycLhgrncBDRQhbRs2GYNOMyoZd6LQ",
 									"type": "string"
 								}
 							]
@@ -998,7 +1070,7 @@
 								{
 									"key": "file",
 									"type": "file",
-									"src": "postman/gigachad.jpg"
+									"src": "/C:/Users/User/IdeaProjects/EjercicioSpring/postman/gigachad.jpg"
 								}
 							]
 						},
@@ -1020,6 +1092,16 @@
 				{
 					"name": "delete NOT FOUND",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTIwOTIxLCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.XLcutDR9o2QQo9FHwh73KijqK6dRKUvbOd_aFNLgRkzfqquaMa86dTCVZeGeSiu8qSdS0SxM5Ca9stYoLWcDPw",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -1033,6 +1115,37 @@
 								"ejercicioSpring",
 								"storage",
 								"gigachad.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find image (cambiar url al nombre de una imagen que exista)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTE3MDE4LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Shv_cm0XlsUameD__b4p46Av231HdB3bD2tR-mq_fgRGBM5uCQVF9HRMxM5zDwF2L-TD-o3Z9f1a89OCK5O4Uw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/storage/gigachad_1677519375711.jpg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"storage",
+								"gigachad_1677519375711.jpg"
 							]
 						}
 					},
