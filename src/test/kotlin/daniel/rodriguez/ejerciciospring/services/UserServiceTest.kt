@@ -2,7 +2,6 @@ package daniel.rodriguez.ejerciciospring.services
 
 import daniel.rodriguez.ejerciciospring.dto.UserDTOcreacion
 import daniel.rodriguez.ejerciciospring.exception.UserExceptionNotFound
-import daniel.rodriguez.ejerciciospring.mappers.fromDTO
 import daniel.rodriguez.ejerciciospring.models.Role
 import daniel.rodriguez.ejerciciospring.models.User
 import daniel.rodriguez.ejerciciospring.repositories.user.UserRepository
@@ -14,7 +13,6 @@ import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flowOf
-import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test

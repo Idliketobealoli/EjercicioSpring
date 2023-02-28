@@ -1,6 +1,5 @@
 package daniel.rodriguez.ejerciciospring.services
 
-import daniel.rodriguez.ejerciciospring.controllers.StorageController
 import daniel.rodriguez.ejerciciospring.dto.EmpleadoDTOcreacion
 import daniel.rodriguez.ejerciciospring.exception.DepartamentoExceptionNotFound
 import daniel.rodriguez.ejerciciospring.exception.EmpleadoExceptionNotFound
@@ -37,7 +36,6 @@ class EmpleadoServiceTest {
 
     @MockK lateinit var repo: EmpleadoRepositoryCached
     @MockK lateinit var dRepo: DepartamentoRepositoryCached
-    @MockK lateinit var storageController: StorageController
     @InjectMockKs lateinit var service: EmpleadoService
 
     init { MockKAnnotations.init(this) }

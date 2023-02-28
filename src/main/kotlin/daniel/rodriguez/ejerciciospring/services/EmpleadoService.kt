@@ -28,8 +28,7 @@ import java.util.*
 class EmpleadoService
 @Autowired constructor(
     private val repo: EmpleadoRepositoryCached,
-    private val dRepo: DepartamentoRepositoryCached,
-    private val storageController: StorageController
+    private val dRepo: DepartamentoRepositoryCached
 ) {
     suspend fun findEmpleadoByUuid(uuid: UUID): Empleado = withContext(Dispatchers.IO) {
         repo.findByUUID(uuid)
@@ -55,8 +54,6 @@ class EmpleadoService
     }
 
     suspend fun updateAvatar(empleado: Empleado, file: MultipartFile): Empleado = withContext(Dispatchers.IO) {
-        //val response = RestTemplate().postForObject<ResponseEntity<Map<String, String>>>("http://localhost:8080/ejercicioSpring/storage", file, ResponseEntity::class.java)
-        //val response = storageController.uploadFile(file)
         val headers = HttpHeaders()
         headers.contentType = MediaType.MULTIPART_FORM_DATA
         val body: MultiValueMap<String, Any> = LinkedMultiValueMap()
@@ -64,15 +61,6 @@ class EmpleadoService
         val requestEntity = HttpEntity(body, headers)
         val uri = "http://localhost:8080/ejercicioSpring/storage"
         val response = RestTemplate().postForEntity(uri, requestEntity, Map::class.java)
-        /*val request = RequestEntity
-            .post(uri)
-            .accept(MediaType.MULTIPART_FORM_DATA)
-            .body(body)
-
-         */
-        //val response = RestTemplate().exchange(request, MultiValueMap::class.java)
-
-        //val request = RequestEntity(HttpMethod.POST, URI("http://localhost:8080/ejercicioSpring/storage"))
         val avatarUrl = response.body?.get("url")?.toString()
             ?: throw StorageExceptionNotFound("Url not found.")
 
